@@ -183,10 +183,10 @@ import QuartzCore
   var upperLabelTextSize: CGSize!
   
   let track = RangeSliderTrack()
-  let lowerKnob = RangeSliderKnob()
-  let upperKnob = RangeSliderKnob()
-  let lowerLabel = CATextLayer()
-  let upperLabel = CATextLayer()
+  public var lowerKnob = RangeSliderKnob()
+  public var upperKnob = RangeSliderKnob()
+  public var lowerLabel = CATextLayer()
+  public var upperLabel = CATextLayer()
   
   var TrackThickness: CGFloat {
     get {
