@@ -21,7 +21,7 @@ public enum KnobAnchorPosition {
   case center
 }
 
-class RangeSliderKnob: CALayer {
+public class RangeSliderKnob: CALayer {
   static var KnobDelta: CGFloat = 2.0
     
   var highlighted: Bool = false {
@@ -35,7 +35,7 @@ class RangeSliderKnob: CALayer {
   }
   weak var rangeSlider: RangeSlider?
   
-  override func draw(in ctx: CGContext) {
+  override public func draw(in ctx: CGContext) {
     if let slider = rangeSlider {
       let knobFrame = bounds.insetBy(dx: RangeSliderKnob.KnobDelta, dy: RangeSliderKnob.KnobDelta)
       let cornerRadius = knobFrame.height * slider.curvaceousness / 2
