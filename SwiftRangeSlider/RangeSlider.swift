@@ -439,7 +439,8 @@ import QuartzCore
     }
     
     if stepValue != 0 {
-      deltaValue = deltaValue < 0 ? -stepValue : stepValue
+      let steps = round(deltaValue / stepValue)
+      deltaValue = stepValue * steps
     }
     
     previousLocation = location
