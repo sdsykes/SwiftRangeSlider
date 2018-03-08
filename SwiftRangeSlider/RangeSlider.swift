@@ -445,7 +445,7 @@ import QuartzCore
     
     previousLocation = location
     
-    if lowerKnob.highlighted && upperKnob.highlighted {
+    if lowerKnob.highlighted && upperKnob.highlighted || (upperValue - lowerValue == minimumDistance && ((lowerKnob.highlighted && deltaValue > 0) || (upperKnob.highlighted && deltaValue < 0))) {
       let gap = upperValue - lowerValue
       if (deltaValue > 0) {
         let newUpperValue = upperValue + deltaValue
